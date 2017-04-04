@@ -1,0 +1,391 @@
+<!doctype html>
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="ar">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('main.js').catch(function(err){ console.error(err); });
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="container">
+        <input type="checkbox" name="show-hide" id="menu-show" class="hidden">
+        <label for="menu-show" class="menu-small pull-right">
+          <i class="fa fa-bars"></i>
+        </label>
+        <div class="main-menu pull-right">
+          <a href="#" class="active">الرئيسية</a>
+          <a href="#">من انا</a>
+          <a href="#">المدونة</a>
+          <a href="#">معرض اعمال</a>
+          <a href="#">المتجر</a>
+          <a href="#">طلب تصميم</a>
+          <a href="#">راسلني</a>
+          <span class="search">
+            <input type="text">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="social-menu pull-left">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <input type="checkbox" name="show-hide" id="filter-show" class="hidden">
+    <label for="filter-show" class="filter-show pull-left">
+      <i class="fa fa-filter"></i>
+    </label>
+    <section class="row filter">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="block">
+          <div class="block-title">
+            <h2>الالوان</h2>
+          </div>
+          <div class="block-body">
+             <div class="product-colors">
+              <a class="color-1" href="#">1</a>
+              <a class="color-2" href="#">2</a>
+              <a class="color-3" href="#">3</a>
+              <a class="color-4" href="#">4</a>
+              <a class="color-5" href="#">5</a>
+              <a class="color-6" href="#">6</a>
+              <a class="color-7" href="#">1</a>
+              <a class="color-8" href="#">2</a>
+              <a class="color-9" href="#">3</a>
+              <a class="color-10" href="#">4</a>
+              <a class="color-11" href="#">5</a>
+              <a class="color-12" href="#">6</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="block">
+          <div class="block-title">
+            <h2>نطاق السعر</h2>
+          </div>
+          <div class="block-body">
+            <div id="slider-range"></div>
+            <p>
+              <span id="price-start"><span></span> جنيه</span>
+              <span id="price-end"><span></span> جنيه</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="block">
+          <div class="block-title">
+            <h2>المقاسات المتاحة</h2>
+          </div>
+          <div class="block-body">
+            <p class="sizes">
+              <a href="#">صغير</a>
+              <a href="#" class="active">وسط</a>
+              <a href="#">كبير</a>
+              <a href="#">كبير اوي</a>
+              <a href="#">كبير اوي اوي</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 search-block-container">
+        <div class="block">
+          <div class="block-title">
+            <h2>البحث في المنتجات</h2>
+          </div>
+          <div class="block-body">
+            <form action="" class="search-block">
+              <input type="text" placeholder="البحث في المنتجات">
+              <button>
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+            <p class="advanced-search">
+              <a href="#">البحث المتقدم</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-md-12">
+        <article class="product-page clearfix block">
+          <figure class="product-image col-md-6  col-sm-6 col-xs-12">
+            <img id="zoom_05" data-zoom-image="http://placehold.it/1000x1000" src="http://placehold.it/570x600" title="تيشيرت رجالي صيفي ملوش حل" alt="تيشيرت رجالي صيفي ملوش حل" />
+          </figure>
+          <section class="product-detailes col-md-6  col-sm-6 col-xs-12">
+            <h3 class="category">ملابس رجالي</h3>
+            <h1 class="product-name">سويت شيرت</h1>
+            <p class="product-description">
+              تيشرت رجالي صيفي مالوش حل م الجمال سواء تصميم او ألوان او تنفيذ يعني م الاخر تيشرت لازم تشترية انا عن نفسي لو لقيته ف السوق هاشترية وش مفيش كلام التيشرت بمقاسات مختلفة صغير وكبير ومتوسط واكس اكس لارج بالاوي كمان المهم انه كدا تقريباً محتاجين كمان سطرين تلاته علشان الوصف يبقى شكلة لطيف تحت عنوان المنتج علشان نكمل للي عاوزينه وبكدا نكون خلصنا الوصف بتاع المنتج هنا
+            </p>
+            <ul class="tags">
+              <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>تصميم مميز</li>
+              <li><i class="fa fa-check-circle-o" aria-hidden="true"></i>الوان ومقاسات مختلفة</li>
+            </ul>
+            <div class="product-colors">
+              <span>اللون</span>
+              <a class="color-1" href="#">1</a>
+              <a class="color-2" href="#">2</a>
+              <a class="color-11" href="#">5</a>
+              <a class="color-12" href="#">6</a>
+            </div>
+            <div class="sizes">
+              <span>الحجم</span>
+              <a href="#">صغير</a>
+              <a href="#" class="active">وسط</a>
+              <a href="#">كبير</a>
+              <a href="#">كبير اوي</a>
+            </div>
+            <p class="product-cart clearfix">
+              <span class="price">100 جنيه</span>
+              <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>اضافة لسلة المشتريات</a>
+            </p>
+          </section>
+            <nav class="col-xs-12 products-nav">
+              <a href="product_next.html" class="product-nav-prev"><i class="fa fa-angle-right" aria-hidden="true"></i>سويت شيرت سابق</a>
+              <ul class="pull-left">
+                <li><a href="/" class="pull-left">تيشيرت رجالي صيفي</a></li>
+                <li><a href="/" class="product-nav-next pull-left">تيشيرت رجالي<i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+              </ul>
+            </nav>
+
+        </article>
+      </div>
+    </div>
+
+    <section class="row related-products">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="product-thumb">
+          <figure class="image new">
+            <img src="http://placehold.it/270x180" title="تيشيرت رجالي ملوش حل" alt="تيشيرت رجالي ملوش حل">
+          </figure>
+          <div class="desc">
+            <h3>تيشيرت رجالي ملوش حل</h3>
+            <p class="product-cart clearfix">
+              <span class="price">100 جنيه</span>
+              <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>شراء</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="product-thumb">
+          <figure class="image new">
+            <img src="http://placehold.it/270x180" title="تيشيرت رجالي ملوش حل" alt="تيشيرت رجالي ملوش حل">
+          </figure>
+          <div class="desc">
+            <h3>تيشيرت رجالي ملوش حل</h3>
+            <p class="product-cart clearfix">
+              <span class="price">100 جنيه</span>
+              <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>شراء</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="product-thumb">
+          <figure class="image new">
+            <img src="http://placehold.it/270x180" title="تيشيرت رجالي ملوش حل" alt="تيشيرت رجالي ملوش حل">
+          </figure>
+          <div class="desc">
+            <h3>تيشيرت رجالي ملوش حل</h3>
+            <p class="product-cart clearfix">
+              <span class="price">100 جنيه</span>
+              <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>شراء</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="product-thumb">
+          <figure class="image new">
+            <img src="http://placehold.it/270x180" title="تيشيرت رجالي ملوش حل" alt="تيشيرت رجالي ملوش حل">
+          </figure>
+          <div class="desc">
+            <h3>تيشيرت رجالي ملوش حل</h3>
+            <p class="product-cart clearfix">
+              <span class="price">100 جنيه</span>
+              <a href="#" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>شراء</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+
+    </section>
+
+    <div class="row">
+
+      <div class="col-sm-4 col-xs-12 follow">
+        <div class="block">
+           <ul class="list">
+            <li>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <span>تابعنا علي تويتر</span>
+                <span class="badge">24323</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <span>كن احد المعجبين</span>
+                <span class="badge">24323</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-4 col-xs-12 weather">
+        <div class="block clearfix">
+          <my-app>Loading AppComponent content here ...</my-app>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 latest">
+        <div class="block">
+        <!-- TABS -->
+        <div class="tabs">
+          
+          <input type="radio" name="tabs" id="articles" checked>
+          <label for="articles">اخر المقالات</label>
+
+          <input type="radio" name="tabs" id="comments">
+          <label for="comments">التعليقات</label>
+
+          <input type="radio" name="tabs" id="tags">
+          <label for="tags">الوسوم</label>
+          
+        </div>
+
+        <div class="tabs-content">
+          <!-- articles tab -->
+          <div class="tab-element articles active">
+            <ul class="articles-list list">
+              <li>
+                <div class="image">
+                  <img src="http://placehold.it/100x55">
+                </div>
+                <h3>مثال علي عنوان المقال</h3>
+                <span class="date">بتاريخ ١٢ فبراير</span>
+              </li>
+              <li>
+                <div class="image">
+                  <img src="http://placehold.it/100x55">
+                </div>
+                <h3>مثال علي عنوان المقال</h3>
+                <span class="date">بتاريخ ١٢ فبراير</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- comments tab -->
+          <div class="tab-element comments">
+            <ul class="articles-list list">
+              <li>
+                <div class="image">
+                  <img src="http://placehold.it/100x55">
+                </div>
+                <h3>مثال علي عنوان المقال</h3>
+                <span class="date">بتاريخ ١٢ فبراير</span>
+              </li>
+              <li>
+                <div class="image">
+                  <img src="http://placehold.it/100x55">
+                </div>
+                <h3>مثال علي عنوان المقال</h3>
+                <span class="date">بتاريخ ١٢ فبراير</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- tags tab -->
+          <div class="tab-element tags">
+            <ul class="articles-list list">
+              <li>
+                <div class="image">
+                  <img src="http://placehold.it/100x55">
+                </div>
+                <h3>مثال علي عنوان المقال</h3>
+                <span class="date">بتاريخ ١٢ فبراير</span>
+              </li>
+              <li>
+                <div class="image">
+                  <img src="http://placehold.it/100x55">
+                </div>
+                <h3>مثال علي عنوان المقال</h3>
+                <span class="date">بتاريخ ١٢ فبراير</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <footer>
+    <div class="news-letter">
+      <div class="container">
+        <h3>اشترك بالقائمة البريدية</h3>
+        <form action="#">
+          <div class="form">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <input type="email" placeholder="ادخل بريدك الالكتروني">
+          </div>
+          <input class="btn btn-yellow" type="submit" value="اشتراك" />
+        </form>
+      </div>
+    </div>
+    <div class="coyright">
+      <div class="container">
+        <span>جميع الحقوق محفوظه</span>
+        <nav>
+          <a href="#">الرئيسية</a>
+          <a href="#">من نحن</a>
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">اتصل بنا</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

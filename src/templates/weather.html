@@ -1,0 +1,7 @@
+<i class="wi wi-owm-{{weatherItem?.weather[0].id}}"></i>
+<p class="info">
+    {{weatherItem?.name}} - {{weatherItem?.sys.country}} <br>
+    {{weatherItem?.main.temp}}<br>
+    km/h {{weatherItem?.wind.speed * 3.6 | number:0}}
+</p>
+
